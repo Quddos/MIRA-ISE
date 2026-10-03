@@ -1,0 +1,55 @@
+{
+  "schema": "mira.capture_config/0.1",
+  "capture_config_id": "CAPTURE_BASELINE_V1",
+  "description": "Deterministic baseline RGB capture for Phase 5B. One fixed camera for every case; camera variation is a later robustness experiment. Poses are in the Unity frame (unity_lh_yup_zfwd): +x = character right, +z = character forward.",
+  "camera": {
+    "camera_id": "baseline_over_shoulder_v1",
+    "projection": "perspective",
+    "coordinate_frame": "unity_lh_yup_zfwd",
+    "position": [-1.35, 2.3, -0.7],
+    "rotation_euler_deg": [32.3, 50.7, 0.0],
+    "fov_deg": 55.0,
+    "near_clip_m": 0.05,
+    "far_clip_m": 30.0,
+    "width": 640,
+    "height": 480,
+    "background_rgb": [0.16, 0.17, 0.19]
+  },
+  "lighting": {
+    "directional_rotation_euler_deg": [50.0, -30.0, 0.0],
+    "directional_intensity": 1.0,
+    "directional_rgb": [1.0, 1.0, 1.0],
+    "shadows": "hard",
+    "shadow_strength": 0.6,
+    "shadow_distance_m": 12.0,
+    "ambient_rgb": [0.42, 0.42, 0.45]
+  },
+  "render": {
+    "msaa_samples": 4,
+    "image_format": "png",
+    "color_space_note": "RenderTexture ARGB32 sRGB; project color space recorded in the capture record"
+  },
+  "avatar": {
+    "style": "mannequin",
+    "body_rgb": [0.80, 0.80, 0.78],
+    "joint_rgb": [0.62, 0.62, 0.62]
+  },
+  "environment": {
+    "floor_rgb": [0.38, 0.38, 0.38],
+    "table_rgb": [0.10, 0.30, 0.50],
+    "net_rgb": [0.92, 0.92, 0.92],
+    "target_rgb": [1.0, 0.55, 0.10],
+    "target_color_changes_on_acquisition": false
+  },
+  "skeleton_overlay": {
+    "rgb": [0.20, 1.0, 1.0],
+    "joint_marker_diameter_m": 0.028,
+    "bone_width_m": 0.010,
+    "draw_on_top": true,
+    "source": "observed (noisy) joint positions from the observation record"
+  },
+  "benchmark_mode": {
+    "debug_overlays": false,
+    "text_allowed": false
+  }
+}
